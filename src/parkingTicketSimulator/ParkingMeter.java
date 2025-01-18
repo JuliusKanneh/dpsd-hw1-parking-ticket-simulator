@@ -26,12 +26,13 @@ public class ParkingMeter
         return "ParkingMeter [_minutesPurchased=" + _minutesPurchased + "]";
     }
     
-    public double computeExtraHours(ParkedCar parkedCar) 
+    public int computeExtraHours(ParkedCar parkedCar) 
     {
         if (parkedCar.getMinsParked() > _minutesPurchased) 
         {  
-             double computedHours = (parkedCar.getMinsParked() - _minutesPurchased) / 60;
-             return computedHours;
+             double computedHours = ((double) parkedCar.getMinsParked() - _minutesPurchased) / 60;
+             int roundedUpComputedHours = (int) Math.ceil(computedHours);
+             return roundedUpComputedHours;
         }
                     
         return 0;

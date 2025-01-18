@@ -53,7 +53,7 @@ public class ParkingTicket
     public double computeFine(ParkingMeter parkingMeter)
     {
         double computedFine = 0.0;
-        double computedHours = parkingMeter.computeExtraHours(_parkedCar);
+        int computedHours = parkingMeter.computeExtraHours(_parkedCar);
         
         if(computedHours > 0) 
         {
