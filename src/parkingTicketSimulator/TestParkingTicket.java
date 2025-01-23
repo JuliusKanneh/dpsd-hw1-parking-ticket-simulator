@@ -45,9 +45,9 @@ public class TestParkingTicket
 //        PoliceOfficer policeOfficer = new PoliceOfficer("John Brown", "RP12345");
         
       //--------Test Case 9-----------------
-//        ParkedCar parkedCar = new ParkedCar("Toyota", "Camry", "red", "RAB 123 A", 222);
-//        ParkingMeter parkingMeter = new ParkingMeter(60);
-//        PoliceOfficer policeOfficer = new PoliceOfficer("John Brown", "RP12345");
+        ParkedCar parkedCar = new ParkedCar("Toyota", "Camry", "red", "RAB 123 A", 222);
+        ParkingMeter parkingMeter = new ParkingMeter(60);
+        PoliceOfficer policeOfficer = new PoliceOfficer("John Brown", "RP12345");
         
       //--------Test Case 10-----------------
 //        ParkedCar parkedCar = new ParkedCar("Toyota", "Camry", "red", "RAB 123 A", 120);
@@ -55,9 +55,9 @@ public class TestParkingTicket
 //        PoliceOfficer policeOfficer = new PoliceOfficer("John Brown", "RP12345");
         
       //--------Test Case 10-----------------
-        ParkedCar parkedCar = new ParkedCar("Toyota", "Camry", "red", "RAB 123 A", 121);
-        ParkingMeter parkingMeter = new ParkingMeter(120);
-        PoliceOfficer policeOfficer = new PoliceOfficer("John Brown", "RP12345");
+//        ParkedCar parkedCar = new ParkedCar("Toyota", "Camry", "red", "RAB 123 A", 121);
+//        ParkingMeter parkingMeter = new ParkingMeter(120);
+//        PoliceOfficer policeOfficer = new PoliceOfficer("John Brown", "RP12345");
         
         if(parkingMeter.isPurchasedTimeExpired(parkedCar)) {
             ParkingTicket parkingTicket = policeOfficer.issueTicket(parkedCar, parkingMeter);

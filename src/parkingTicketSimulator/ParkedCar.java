@@ -8,6 +8,14 @@ public class ParkedCar
     private String _licenseNumber;
     private int _minsParked;
     
+    public ParkedCar(ParkedCar parkedCar) {
+        _make = parkedCar.getMake();
+        _model = parkedCar.getModel();
+        _color = parkedCar.getColor();
+        _licenseNumber = parkedCar.getLicenseNumber();
+        _minsParked = parkedCar.getMinsParked();
+    }
+    
     public ParkedCar(String make, String model, String color, String licenseNumber, int minsParked)
     {
         super();

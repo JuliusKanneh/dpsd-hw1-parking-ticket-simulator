@@ -11,6 +11,12 @@ public class PoliceOfficer
         _name = name;
         _batchNumber = batchNumber;
     }
+    
+    public PoliceOfficer(PoliceOfficer policeOfficer) {
+        _name = policeOfficer.getName();
+        _batchNumber = policeOfficer.getBatchNumber();
+    }
+    
     public String getName()
     {
         return _name;
@@ -25,6 +31,11 @@ public class PoliceOfficer
     }
     public void setBatchNumber(String batchNumber)
     {
+        _batchNumber = batchNumber;
+    }
+    
+    public void setNameAndBatchNumber(String name, String batchNumber) {
+        _name = name;
         _batchNumber = batchNumber;
     }
     
@@ -44,9 +55,9 @@ public class PoliceOfficer
     
     public ParkingTicket issueTicket(ParkedCar parkedCar, ParkingMeter parkingMeter) 
     {
-        ParkingTicket parkingTicket = new ParkingTicket(parkedCar, this);
-        double fine = parkingTicket.computeFine(parkingMeter);
-        parkingTicket.setFine(fine);
-        return parkingTicket;
+//        ParkingTicket parkingTicket = new ParkingTicket(parkedCar, this, parkingMeter);
+//        double fine = parkingTicket.computeFine(parkingMeter);
+//        parkingTicket.setFine(fine);
+        return new ParkingTicket(parkedCar, this, parkingMeter);
     }
 }

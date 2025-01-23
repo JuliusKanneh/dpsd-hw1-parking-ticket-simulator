@@ -6,12 +6,12 @@ public class ParkingTicket
     private double _fine;
     private PoliceOfficer _policeOfficer;
     
-    public ParkingTicket(ParkedCar parkedCar, PoliceOfficer policeOfficer)
+    public ParkingTicket(ParkedCar tickedCar, PoliceOfficer issuingOfficer, ParkingMeter parkingMeter)
     {
         super();
-        _parkedCar = parkedCar;
-        _policeOfficer = policeOfficer;
-//        _fine = computeFine();
+        _parkedCar = new ParkedCar(tickedCar); //Implementing strong association
+        _policeOfficer = new PoliceOfficer(issuingOfficer); //Implementing strong association
+        _fine = computeFine(parkingMeter);
     }
 
     public ParkedCar getParkedCar()
